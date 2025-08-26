@@ -1,0 +1,32 @@
+export const PERFORMANCE_MULTIPLIER = 2;
+
+export const SCROLL_CONFIG = {
+  MIN_THRESHOLD: 0.1,
+  VELOCITY_MULTIPLIER: 35 * PERFORMANCE_MULTIPLIER * 0.5,
+  MAX_STEPS_PER_SCROLL: 1 * PERFORMANCE_MULTIPLIER,
+  RESET_DELAY: 100,
+  TOUCH_THRESHOLD: 40,
+} as const;
+
+export const BREAKPOINTS = {
+  LARGE: 900,
+  MEDIUM: 500,
+} as const;
+
+export const FONT_CONFIG = {
+  DESKTOP: 185,
+  LARGE_TABLET: 165,
+  TABLET: 145,
+  MOBILE: 125,
+  SIZE_INCREMENT: 15,
+  SIZE_MULTIPLIER: 0.05,
+} as const;
+
+export const SPRING_CONFIG = {
+  type: "spring" as const,
+  stiffness: 3750 * PERFORMANCE_MULTIPLIER,
+  damping: 10 * PERFORMANCE_MULTIPLIER,
+  mass: 0.5 / PERFORMANCE_MULTIPLIER,
+  restDelta: 0.0001,
+  restSpeed: 0.0001,
+} as const;
